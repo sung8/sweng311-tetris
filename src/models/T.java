@@ -1,7 +1,15 @@
 package models;
 
 import java.awt.Point;
-
+/**
+ * T.java:
+ * Creates a T shape tetronimo
+ *
+ * @author Sunghee Choi
+ * @version 1.0
+ *
+ * @see java.awt.Point
+ */
 public class T extends Tetronimo
 {
     public T()

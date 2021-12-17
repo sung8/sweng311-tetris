@@ -3,16 +3,22 @@ package controllers;
 import models.*;
 import views.TetrisBoard;
 
+import java.util.Random;
+
 /**
  * TetrisController.java:
  * Class to hold all of the game logic for tetris
  *
  * @author Professor Rossi
+ * @author Sunghee Choi
+ *
  * @version 1.0 July 24, 2020
  */
 public class TetrisController
 {
     private final TetrisBoard TETRIS_BOARD;
+    private final int cont = 1;
+    private final int randNum = 0;
 
     /**
      * Constructor to take in a tetris board so the controller and the board can communciate
@@ -33,7 +39,25 @@ public class TetrisController
     {
         Tetronimo tetronimo;
 
+        Random rn = new Random();
+        int randInt = rn.nextInt(5) + 1;
+
+        if (randInt == 1) {
+            tetronimo = new StraightLine();
+        } else if (randInt == 2) {
+            tetronimo = new Square();
+        } else if (randInt == 3) {
+            tetronimo = new T();
+        } else if (randInt == 4) {
+            tetronimo = new L();
+        } else if (randInt == 5) {
+            tetronimo = new J();
+        } else {
+            tetronimo = new StraightLine();
+        }
+
         tetronimo = new L();
+
         tetronimo.setLocation( 40 + (5 * Tetronimo.SIZE), 0 );
 
         return tetronimo;

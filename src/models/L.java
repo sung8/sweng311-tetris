@@ -31,14 +31,8 @@ public class L extends Tetronimo
         super.setLocation(0,0);
         System.out.println(curRotation);
 
-        if (super.curRotation != 2 && super.curRotation % 4 == 2) {
-            super.r1.setLocation( 0, 0 );
-            super.r2.setLocation( 0, Tetronimo.SIZE );
-            super.r3.setLocation( 0, Tetronimo.SIZE * 2 );
-            super.r4.setLocation( Tetronimo.SIZE, Tetronimo.SIZE * 2 );
-            h = 3 * Tetronimo.SIZE;
-            w = 2 * Tetronimo.SIZE;
-        } else if (super.curRotation % 4 == 2) {
+
+        if (super.curRotation % 4 == 2) {
             super.r1.setLocation( Tetronimo.SIZE*3, 0 );
             super.r2.setLocation( Tetronimo.SIZE*2, 0);
             super.r3.setLocation( Tetronimo.SIZE, 0);
@@ -46,26 +40,26 @@ public class L extends Tetronimo
             h = 2 * Tetronimo.SIZE;
             w = 3 * Tetronimo.SIZE;
         } else if (super.curRotation % 4 == 3) {
-            super.r1.setLocation( Tetronimo.SIZE*3, 0 );
-            super.r2.setLocation( Tetronimo.SIZE*2, 0);
-            super.r3.setLocation( Tetronimo.SIZE, 0);
-            super.r4.setLocation( Tetronimo.SIZE, Tetronimo.SIZE );
-            h = 2 * Tetronimo.SIZE;
-            w = 3 * Tetronimo.SIZE;
-        } else if (super.curRotation % 4 == 0) {
             super.r1.setLocation( Tetronimo.SIZE, 0 );
             super.r2.setLocation( Tetronimo.SIZE, Tetronimo.SIZE);
             super.r3.setLocation( Tetronimo.SIZE, Tetronimo.SIZE*2);
             super.r4.setLocation( 0, 0 );
             h = 3 * Tetronimo.SIZE;
             w = 2 * Tetronimo.SIZE;
-        } else if (super.curRotation % 4 == 1) {
+        } else if (super.curRotation % 4 == 0) {
             super.r1.setLocation( 0, 0 );
             super.r2.setLocation( Tetronimo.SIZE, 0 );
             super.r3.setLocation( Tetronimo.SIZE*2, 0 );
             super.r4.setLocation( Tetronimo.SIZE*2, -Tetronimo.SIZE );
             h = 2 * Tetronimo.SIZE;
             w = 3 * Tetronimo.SIZE;
+        } else if (super.curRotation % 4 == 1) {
+            super.r1.setLocation( 0, 0 );
+            super.r2.setLocation( 0, Tetronimo.SIZE );
+            super.r3.setLocation( 0, Tetronimo.SIZE * 2 );
+            super.r4.setLocation( Tetronimo.SIZE, Tetronimo.SIZE * 2 );
+            h = 3 * Tetronimo.SIZE;
+            w = 2 * Tetronimo.SIZE;
         }
 
         super.setLocation( curLoc );
