@@ -3,7 +3,7 @@ package models;
 import java.awt.Point;
 
 /**
- * Z.java:
+ * S.java:
  * Creates a S shaped tetronimo
  *
  * @author Sunghee Choi
@@ -19,8 +19,8 @@ public class S extends Tetronimo
      */
     public S()
     {
-        super.r1.setLocation(0, 0);
-        super.r2.setLocation(Tetronimo.SIZE, 0);
+        super.r1.setLocation(Tetronimo.SIZE*2, 0);
+        super.r2.setLocation(Tetronimo.SIZE*3, 0);
         super.r3.setLocation(Tetronimo.SIZE, Tetronimo.SIZE);
         super.r4.setLocation(Tetronimo.SIZE*2, Tetronimo.SIZE);
 
@@ -43,15 +43,15 @@ public class S extends Tetronimo
 
         if( super.curRotation % 2 == 0 )
         {
-            super.r1.setLocation( 0, 0 );
-            super.r2.setLocation( 0, Tetronimo.SIZE );
-            super.r3.setLocation( Tetronimo.SIZE, Tetronimo.SIZE );
-            super.r4.setLocation( Tetronimo.SIZE, Tetronimo.SIZE*2 );
+            super.r1.setLocation(0, 0);
+            super.r2.setLocation(0, Tetronimo.SIZE);
+            super.r3.setLocation(Tetronimo.SIZE, Tetronimo.SIZE);
+            super.r4.setLocation(Tetronimo.SIZE, Tetronimo.SIZE*2);
         }
         else
         {
-            super.r1.setLocation(0, 0);
-            super.r2.setLocation(Tetronimo.SIZE, 0);
+            super.r1.setLocation(Tetronimo.SIZE*2, 0);
+            super.r2.setLocation(Tetronimo.SIZE*3, 0);
             super.r3.setLocation(Tetronimo.SIZE, Tetronimo.SIZE);
             super.r4.setLocation(Tetronimo.SIZE*2, Tetronimo.SIZE);
         }

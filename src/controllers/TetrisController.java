@@ -40,7 +40,7 @@ public class TetrisController
         Tetronimo tetronimo;
 
         Random rn = new Random();
-        int randInt = rn.nextInt(5) + 1;
+        int randInt = rn.nextInt(7) + 1;
 
         if (randInt == 1) {
             tetronimo = new StraightLine();
@@ -52,11 +52,13 @@ public class TetrisController
             tetronimo = new L();
         } else if (randInt == 5) {
             tetronimo = new J();
+        } else if (randInt == 6) {
+            tetronimo = new Z();
+        } else if (randInt == 7) {
+            tetronimo = new S();
         } else {
             tetronimo = new StraightLine();
         }
-
-        tetronimo = new L();
 
         tetronimo.setLocation( 40 + (5 * Tetronimo.SIZE), 0 );
 

@@ -43,10 +43,10 @@ public class Z extends Tetronimo
 
         if( super.curRotation % 2 == 0 )
         {
-            super.r1.setLocation( 0, 0 );
+            super.r1.setLocation( Tetronimo.SIZE, 0 );
             super.r2.setLocation( 0, Tetronimo.SIZE );
             super.r3.setLocation( Tetronimo.SIZE, Tetronimo.SIZE );
-            super.r4.setLocation( Tetronimo.SIZE, Tetronimo.SIZE*2 );
+            super.r4.setLocation( 0, Tetronimo.SIZE*2 );
         }
         else
         {
